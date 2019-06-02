@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
 
 
 from selenium import webdriver
@@ -22,7 +21,7 @@ driver.get("https://www.linkedin.com/login")
 driver.implicitly_wait(3)
 
 usnm=input("Enter the Username: ")
-pswd=input("Enter the Password")
+pswd=input("Enter the Password: ")
 post_url=input("Enter the post url which you want to scrape: ")
 
 driver.find_element_by_xpath("//*[@id='username']").send_keys(usnm)
@@ -43,7 +42,7 @@ while True:
 name = driver.find_elements_by_css_selector("h3 > span.feed-shared-post-meta__name.t-14.t-black.t-bold > span.hoverable-link-text")
 #name1 = name.find_elements_by_class_name("hoverable-link-text")
 email_wide_view=driver.find_elements_by_class_name("ember-view")
-#email_text=
+
 nm=[]
 em=[]
 for span in name:
@@ -67,7 +66,6 @@ k=len(nm)
 print(str(k)+' emails Scraped')
 
 
-# In[ ]:
 
 
 
