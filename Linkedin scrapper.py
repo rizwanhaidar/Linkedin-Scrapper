@@ -26,7 +26,9 @@ post_url=input("Enter the post url which you want to scrape: ")
 
 driver.find_element_by_xpath("//*[@id='username']").send_keys(usnm)
 driver.find_element_by_xpath("//*[@id='password']").send_keys(pswd)
-driver.find_element_by_xpath("//*[@id='app__container']/main/div/form/div[3]/button").click()
+driver.find_element_by_xpath("//*[@id='app__container']/main/div/form/div[4]/button").click()
+#A small change in div as now we have to skip the 3 button and to reach 4th button whihc says login
+#3rd button have been updated as remember me button
 time.sleep(5)
 driver.get(post_url)
 
